@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alaina K">
 
-<title>analysis</title>
+<title>Analyzing US Births</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -50,10 +51,252 @@ ul.task-list li input[type="checkbox"] {
 
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analyzing US Births</h1>
+</div>
 
 
 
-<p>“Analyzing US Births” Author: “Alaina K”</p>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alaina K </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 18%">
+<col style="width: 14%">
+<col style="width: 38%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Weekday on Dec 25</th>
+<th style="text-align: right;">Dec 25 births</th>
+<th style="text-align: right;">Average births on Dec 20-24 and 27-30</th>
+<th style="text-align: right;">Dec 25 (% of baseline)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1994</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">7192</td>
+<td style="text-align: right;">11392.1</td>
+<td style="text-align: right;">63.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1995</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">7027</td>
+<td style="text-align: right;">10663.9</td>
+<td style="text-align: right;">65.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1996</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">7092</td>
+<td style="text-align: right;">10018.9</td>
+<td style="text-align: right;">70.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1997</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">7055</td>
+<td style="text-align: right;">10239.2</td>
+<td style="text-align: right;">68.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1998</td>
+<td style="text-align: left;">Fri</td>
+<td style="text-align: right;">7020</td>
+<td style="text-align: right;">11094.2</td>
+<td style="text-align: right;">63.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1999</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6674</td>
+<td style="text-align: right;">11789.9</td>
+<td style="text-align: right;">56.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">6719</td>
+<td style="text-align: right;">11683.7</td>
+<td style="text-align: right;">57.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2001</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6603</td>
+<td style="text-align: right;">10791.4</td>
+<td style="text-align: right;">61.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2002</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">6774</td>
+<td style="text-align: right;">10577.6</td>
+<td style="text-align: right;">64.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2003</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6744</td>
+<td style="text-align: right;">10715.9</td>
+<td style="text-align: right;">62.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2004</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6259</td>
+<td style="text-align: right;">12559.6</td>
+<td style="text-align: right;">49.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2005</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">6224</td>
+<td style="text-align: right;">12690.0</td>
+<td style="text-align: right;">49.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2006</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">6409</td>
+<td style="text-align: right;">12340.9</td>
+<td style="text-align: right;">51.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2007</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6624</td>
+<td style="text-align: right;">11515.3</td>
+<td style="text-align: right;">57.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2008</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6471</td>
+<td style="text-align: right;">10971.2</td>
+<td style="text-align: right;">59.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2009</td>
+<td style="text-align: left;">Fri</td>
+<td style="text-align: right;">6160</td>
+<td style="text-align: right;">11595.8</td>
+<td style="text-align: right;">53.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6159</td>
+<td style="text-align: right;">12436.8</td>
+<td style="text-align: right;">49.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2011</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">5728</td>
+<td style="text-align: right;">11906.6</td>
+<td style="text-align: right;">48.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6325</td>
+<td style="text-align: right;">10415.4</td>
+<td style="text-align: right;">60.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2013</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">6620</td>
+<td style="text-align: right;">10526.2</td>
+<td style="text-align: right;">62.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6749</td>
+<td style="text-align: right;">10375.9</td>
+<td style="text-align: right;">65.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R-squared: 0.829</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 365 × 4
+   calendar_date month date_of_month mean_pct_resid
+   &lt;date&gt;        &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;
+ 1 2001-01-01        1             1        -26.5  
+ 2 2001-01-02        1             2        -13.9  
+ 3 2001-01-03        1             3         -2.52 
+ 4 2001-01-04        1             4          0.394
+ 5 2001-01-05        1             5          0.363
+ 6 2001-01-06        1             6         -0.149
+ 7 2001-01-07        1             7          0.103
+ 8 2001-01-08        1             8         -1.15 
+ 9 2001-01-09        1             9         -2.17 
+10 2001-01-10        1            10         -0.701
+# ℹ 355 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 </main>
 <!-- /main column -->
