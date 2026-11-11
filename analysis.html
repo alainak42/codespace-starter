@@ -8,7 +8,7 @@
 
 <meta name="author" content="Alaina K">
 
-<title>Million Song Dataset</title>
+<title>Analyzing US Births</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -53,7 +53,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Million Song Dataset</h1>
+<h1 class="title">Analyzing US Births</h1>
 </div>
 
 
@@ -77,118 +77,215 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10,000 × 35
-   artist.familiarity artist.hotttnesss artist.id          artist.latitude
-                &lt;dbl&gt;             &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
- 1              0.582             0.402 ARD7TVE1187B99BFB1             0  
- 2              0.631             0.417 ARMJAGH1187FB546F3            35.1
- 3              0.487             0.343 ARKRRTF1187B9984DA             0  
- 4              0.630             0.454 AR7G5I41187FB4CE6C             0  
- 5              0.651             0.402 ARXR32B1187FB57099             0  
- 6              0.535             0.385 ARKFYS91187B98E58F             0  
- 7              0.556             0.262 ARD0S291187B9B7BF5             0  
- 8              0.801             0.606 AR10USD1187B99F3F1             0  
- 9              0.427             0.332 AR8ZCNI1187B9A069B             0  
-10              0.551             0.423 ARNTLGG11E2835DDB9             0  
-# ℹ 9,990 more rows
-# ℹ 31 more variables: artist.location &lt;dbl&gt;, artist.longitude &lt;dbl&gt;,
-#   artist.name &lt;chr&gt;, artist.similar &lt;dbl&gt;, artist.terms &lt;chr&gt;,
-#   artist.terms_freq &lt;dbl&gt;, release.id &lt;dbl&gt;, release.name &lt;dbl&gt;,
-#   song.artist_mbtags &lt;dbl&gt;, song.artist_mbtags_count &lt;dbl&gt;,
-#   song.bars_confidence &lt;dbl&gt;, song.bars_start &lt;dbl&gt;,
-#   song.beats_confidence &lt;dbl&gt;, song.beats_start &lt;dbl&gt;, song.duration &lt;dbl&gt;, …</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 9
-  artist  location latitude longitude genre_terms familiarity hotness song_title
-  &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;
-1 Casual         0      0         0   hip hop           0.582   0.402          0
-2 The Bo…        0     35.1     -90.0 blue-eyed …       0.631   0.417          0
-3 Sonora…        0      0         0   salsa             0.487   0.343          0
-4 Adam A…        0      0         0   pop rock          0.630   0.454          0
-5 Gob            0      0         0   pop punk          0.651   0.402          0
-6 Jeff A…        0      0         0   southern g…       0.535   0.385          0
-7 Rated R        0      0         0   breakbeat         0.556   0.262          0
-8 Tweete…        0      0         0   post-hardc…       0.801   0.606          0
-# ℹ 1 more variable: year &lt;dbl&gt;</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "artist.familiarity"             "artist.hotttnesss"             
- [3] "artist.id"                      "artist.latitude"               
- [5] "artist.location"                "artist.longitude"              
- [7] "artist.name"                    "artist.similar"                
- [9] "artist.terms"                   "artist.terms_freq"             
-[11] "release.id"                     "release.name"                  
-[13] "song.artist_mbtags"             "song.artist_mbtags_count"      
-[15] "song.bars_confidence"           "song.bars_start"               
-[17] "song.beats_confidence"          "song.beats_start"              
-[19] "song.duration"                  "song.end_of_fade_in"           
-[21] "song.hotttnesss"                "song.id"                       
-[23] "song.key"                       "song.key_confidence"           
-[25] "song.loudness"                  "song.mode"                     
-[27] "song.mode_confidence"           "song.start_of_fade_out"        
-[29] "song.tatums_confidence"         "song.tatums_start"             
-[31] "song.tempo"                     "song.time_signature"           
-[33] "song.time_signature_confidence" "song.title"                    
-[35] "song.year"                     </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 10,000
-Columns: 10
-$ artist.familiarity &lt;dbl&gt; 0.58179377, 0.63063004, 0.48735679, 0.63038233, 0.6…
-$ artist.hotttnesss  &lt;dbl&gt; 0.4019975, 0.4174996, 0.3434284, 0.4542312, 0.40172…
-$ artist.id          &lt;chr&gt; "ARD7TVE1187B99BFB1", "ARMJAGH1187FB546F3", "ARKRRT…
-$ artist.latitude    &lt;dbl&gt; 0.00000, 35.14968, 0.00000, 0.00000, 0.00000, 0.000…
-$ artist.location    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ artist.longitude   &lt;dbl&gt; 0.00000, -90.04892, 0.00000, 0.00000, 0.00000, 0.00…
-$ artist.name        &lt;chr&gt; "Casual", "The Box Tops", "Sonora Santanera", "Adam…
-$ artist.similar     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ artist.terms       &lt;chr&gt; "hip hop", "blue-eyed soul", "salsa", "pop rock", "…
-$ artist.terms_freq  &lt;dbl&gt; 1.0000000, 1.0000000, 1.0000000, 0.9885839, 0.88728…</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 20
-  artist.familiarity_min artist.familiarity_q1 artist.familiarity_median
-                   &lt;dbl&gt;                 &lt;dbl&gt;                     &lt;dbl&gt;
-1                      0                 0.468                     0.564
-# ℹ 17 more variables: artist.familiarity_q3 &lt;dbl&gt;,
-#   artist.familiarity_max &lt;dbl&gt;, artist.hotttnesss_min &lt;dbl&gt;,
-#   artist.hotttnesss_q1 &lt;dbl&gt;, artist.hotttnesss_median &lt;dbl&gt;,
-#   artist.hotttnesss_q3 &lt;dbl&gt;, artist.hotttnesss_max &lt;dbl&gt;,
-#   song.year_min &lt;dbl&gt;, song.year_q1 &lt;dbl&gt;, song.year_median &lt;dbl&gt;,
-#   song.year_q3 &lt;dbl&gt;, song.year_max &lt;dbl&gt;, song.tempo_min &lt;dbl&gt;,
-#   song.tempo_q1 &lt;dbl&gt;, song.tempo_median &lt;dbl&gt;, song.tempo_q3 &lt;dbl&gt;, …</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 18%">
+<col style="width: 14%">
+<col style="width: 38%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Weekday on Dec 25</th>
+<th style="text-align: right;">Dec 25 births</th>
+<th style="text-align: right;">Average births on Dec 20-24 and 27-30</th>
+<th style="text-align: right;">Dec 25 (% of baseline)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1994</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">7192</td>
+<td style="text-align: right;">11392.1</td>
+<td style="text-align: right;">63.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1995</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">7027</td>
+<td style="text-align: right;">10663.9</td>
+<td style="text-align: right;">65.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1996</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">7092</td>
+<td style="text-align: right;">10018.9</td>
+<td style="text-align: right;">70.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1997</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">7055</td>
+<td style="text-align: right;">10239.2</td>
+<td style="text-align: right;">68.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1998</td>
+<td style="text-align: left;">Fri</td>
+<td style="text-align: right;">7020</td>
+<td style="text-align: right;">11094.2</td>
+<td style="text-align: right;">63.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1999</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6674</td>
+<td style="text-align: right;">11789.9</td>
+<td style="text-align: right;">56.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">6719</td>
+<td style="text-align: right;">11683.7</td>
+<td style="text-align: right;">57.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2001</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6603</td>
+<td style="text-align: right;">10791.4</td>
+<td style="text-align: right;">61.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2002</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">6774</td>
+<td style="text-align: right;">10577.6</td>
+<td style="text-align: right;">64.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2003</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6744</td>
+<td style="text-align: right;">10715.9</td>
+<td style="text-align: right;">62.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2004</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6259</td>
+<td style="text-align: right;">12559.6</td>
+<td style="text-align: right;">49.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2005</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">6224</td>
+<td style="text-align: right;">12690.0</td>
+<td style="text-align: right;">49.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2006</td>
+<td style="text-align: left;">Mon</td>
+<td style="text-align: right;">6409</td>
+<td style="text-align: right;">12340.9</td>
+<td style="text-align: right;">51.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2007</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6624</td>
+<td style="text-align: right;">11515.3</td>
+<td style="text-align: right;">57.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2008</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6471</td>
+<td style="text-align: right;">10971.2</td>
+<td style="text-align: right;">59.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2009</td>
+<td style="text-align: left;">Fri</td>
+<td style="text-align: right;">6160</td>
+<td style="text-align: right;">11595.8</td>
+<td style="text-align: right;">53.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">Sat</td>
+<td style="text-align: right;">6159</td>
+<td style="text-align: right;">12436.8</td>
+<td style="text-align: right;">49.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2011</td>
+<td style="text-align: left;">Sun</td>
+<td style="text-align: right;">5728</td>
+<td style="text-align: right;">11906.6</td>
+<td style="text-align: right;">48.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">Tues</td>
+<td style="text-align: right;">6325</td>
+<td style="text-align: right;">10415.4</td>
+<td style="text-align: right;">60.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2013</td>
+<td style="text-align: left;">Wed</td>
+<td style="text-align: right;">6620</td>
+<td style="text-align: right;">10526.2</td>
+<td style="text-align: right;">62.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">Thurs</td>
+<td style="text-align: right;">6749</td>
+<td style="text-align: right;">10375.9</td>
+<td style="text-align: right;">65.0</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="analysis_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="analysis_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  column             placeholder_rows
-  &lt;chr&gt;                         &lt;int&gt;
-1 artist.location                9999
-2 release.name                   9989
-3 song.title                     9992
-4 song.year                      5320
-5 artist.familiarity               24
-6 artist.hotttnesss               496</code></pre>
+<pre><code>R-squared: 0.829</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 365 × 4
+   calendar_date month date_of_month mean_pct_resid
+   &lt;date&gt;        &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;
+ 1 2001-01-01        1             1        -26.5  
+ 2 2001-01-02        1             2        -13.9  
+ 3 2001-01-03        1             3         -2.52 
+ 4 2001-01-04        1             4          0.394
+ 5 2001-01-05        1             5          0.363
+ 6 2001-01-06        1             6         -0.149
+ 7 2001-01-07        1             7          0.103
+ 8 2001-01-08        1             8         -1.15 
+ 9 2001-01-09        1             9         -2.17 
+10 2001-01-10        1            10         -0.701
+# ℹ 355 more rows</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -198,15 +295,6 @@ $ artist.terms_freq  &lt;dbl&gt; 1.0000000, 1.0000000, 1.0000000, 0.9885839, 0.8
 <p><img src="analysis_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  coordinate_status       songs
-  &lt;chr&gt;                   &lt;int&gt;
-1 usable_coordinates       3742
-2 placeholder_coordinates  6258</code></pre>
 </div>
 </div>
 
